@@ -91,7 +91,3 @@ docker run -d \
 2. When the server boots up, it checks if `enabled.json` exists. If not, it automatically registers and enables all `.tmod` files inside the folder.
 
 ---
-
-## License
-
-Distributed under the [MIT License](LICENSE).
