@@ -31,7 +31,7 @@ services:
       - PASSWORD=PASSWORD  
       - LANGUAGE=en-US
     volumes:
-      - /WORLDS_FOLDER/CHANGE_ME:/usr/local/tml-server/worlds
+      - /WORLDS_FOLDER/CHANGE_ME:/usr/local/tml-server/worlds # SET THIS OR ELSE YOUR WORLD WILL AUTOMATICALLY GET ERASED ON CONTAINER SHUTDOWN!!!
       - /MODS_FOLDER/CHANGE_ME:/usr/local/tml-server/mods
     restart: unless-stopped
     stdin_open: true
@@ -87,7 +87,7 @@ docker run -d \
 
 ## Managing Mods
 
-1. Drop your `.tmod` files directly into the mapped `./mods` volume on your host.
+1. Drop your `.tmod` files directly into the mapped mods volume on your host.
 2. When the server boots up, it checks if `enabled.json` exists. If not, it automatically registers and enables all `.tmod` files inside the folder.
 
 ---
